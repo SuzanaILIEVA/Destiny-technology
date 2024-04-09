@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*degiskenler*/
+:root{
+    --green: #3fc20b;
+    --white:#f5f5f5;
+    --gray: #cdcccc;
+    --black:#121212;
+    
+}
+
+/*standart tanimlama ve stil sifirlama*/
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+h1,h2,h3,h4{
+    font-family: "inter";
+    color: var(--white);
+}
+p{
+    font-family: "poppins";
+    color: var(--gray);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--black);
+    font-family: "poppins";
+}
+button{
+    padding:7px 20px ;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: var(--white);
+    font-family: "poppins";
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+ 
+}
+button:hover{
+    scale: 0.95;
+    box-shadow: 2px 2px 20px white;
+}
+.green-btn{
+   background-color: var(--green);
+}
+
+/*header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    padding: 20px;
+    font-family: "inter";
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+header nav{
+    display: flex;
+    gap: 20px;
+}
+header nav .spec-link{
+    color: var(--green);
+}
+header .nav-btn{
+    display: none;
+}
+/*hero section*/
+#hero{
+    background: url(/images/back.jpg);
+    height: 70vh; /* vh tarayiciyi, % sayfayi baz aliyor*/
+    background-size: cover;
+    display: flex;
+   align-items: center;
+   background-attachment: fixed; /*resmi sabitler sayfanin kalani ustunden kayar*/
+
+}
+#hero .hero-text{
+   max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+   
+    /* yazinin ardindaki cam efekti*/
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0.21);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.8px);
+-webkit-backdrop-filter: blur(3.8px);
+border: 1px solid rgba(255, 255, 255, 0.29);
+
+  
+}
+.hero-text h1{
+    color: var(--green);
+    text-shadow: 2px 2px 6px black;
+    font-size: 35px;
+}
+.hero-text p{
+    text-align: start;
+    font-size: 15px;
+    text-shadow: 2px 2px 6px black;
+    color: #f5f5f5;
+}
+
+/*main alani*/
+main{
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+#window-sec{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 70px;
+}
+.window-sec-info{
+    max-width: 600px;
+    display: grid;
+    gap: 30px;
+}
+.window-sec-info button{
+    font-weight: 600;
+    max-height: 40px;
+}
+.windows{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+   
+}
+.windows .window{
+    background: url(images/sec2.jpg);
+    height: 400px;
+    min-width: 200px;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 40px 40px 0 0;
+}
+.windows .window:nth-child(2){
+    border-radius: 40px ;
+}
+/*cards section*/
+#cards-sec{
+    margin-top: 250px;
+    width: 100%;
+}
+.cards-info{
+    max-width: 600px;
+    display: grid;
+    gap: 30px;
+}
+
+.cards-area{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    margin-top: 35px;
+   
+}
+.cards-area .card{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+.cards-area .card h2{
+    margin-bottom: 20px;
+}
+.cards-area video{
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+/*list section*/
+#list-sec{
+   margin: 100px 0;
+}
+
+#list-sec .info{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+#list-sec .info h2, .info p{
+    max-width: 400px;
+}
+
+#list-sec ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+#list-sec ul li h1 span{
+    font-size: 15px;
+    font-weight: 150;
+    color: gray;
+    margin-bottom: 8%;
+}
+#list-sec ul li img{
+    width: 50px;
+}
+/**
+*
+*
+*
+\*/
+/* project html*/
+
+.welcome{
+    max-width: 1300px;
+    font-size: 56px;
+    padding: 100px;
+    background-image: linear-gradient(270deg, rgb(47, 135, 182) 0%, rgb(239, 67, 236) 100%);
+    -webkit-background-clip: text; /* Arka planı sadece metne kırpma özelliği, -webkit öneki webkit tarayıcıları için */
+    -webkit-text-fill-color: transparent; /* Metnin rengini saydam yapma, -webkit öneki webkit tarayıcıları için */
+    background-clip: text; /* Uyumlu olması için standart arka plan kırpma özelliği */
+}
+    
+#what-sec{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+#what-sec .info {
+    max-width: 400px;
+}
+#what-sec .info h1{
+    margin-bottom: 50px;
+}
+
+#what-sec .cards{
+    display: flex;
+    gap:100px;
+}
+#what-sec .cards .what-card {
+   min-width: 200px;
+   max-width: 400px;
+   height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    background-color:#323443 ;
+    border-radius: 10px;
+    padding: 30px 20px;
+    position: relative;
+}
+#what-sec .cards .what-card img{
+    width: 50px;
+    position: absolute;
+    top: -50px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+footer{
+    padding: 20px;
+}
+footer .links{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px; /*sadece stunlar arasinda bosluk */
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+footer .links .link-area{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .links .link-area input{
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    max-height: 50px;
+    
+}
+footer form button{
+    white-space: nowrap;
+}
+
+footer .bottom{
+    padding-top: 15px;
+    padding-bottom: 15px !important;
+    border-top: 1px solid grey;
+    text-align: center;
+
+}
+
+
+
+/*! Responsive Yapilar*/
+/** max-width = ekran boyutu 1500px ALTINDAYKEN calisir*/
+@media(max-width:1500px){
+
+}
+@media(max-width: 1200px){
+  #window-sec{
+    flex-direction: column;
+    align-items: center;
+  }
+  .windows .window{
+    height: 300px;
+  }
+}
+@media(max-width:1000px){
+    /*footer alani*/
+    footer .links{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 50px;
+        padding: 40px;
+        column-gap: 100px;
+      }
+      footer form{
+        flex-direction: column;
+      }
+      footer form input{
+        max-width: 200px;
+      }
+      footer form button{
+        max-width: 200px;
+      }
+      /*cards alani*/
+      .cards-area{
+        grid-template-columns: 1fr;
+        place-items: center;
+      
+      }
+      .card{
+        max-width: 400px;
+      }
+}
+@media(max-width:800px){
+    header nav{
+        display: none;
+    }
+    header .nav-btn{
+        display: block;
+    }
+    /*hero alani*/
+    #hero{
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-text{
+        margin: 40px;
+    }
+    /*liste alani */
+    #list-sec{
+        padding: 30px;
+    }
+    #list-sec .info{
+        flex-direction: column;
+    }
+    #list-sec .info h2, .info p{
+        max-width: unset; /*unset: onceden bir deger atandiysa,onu kaldirir*/
+    }
+
+}
+@media(max-width:700px){
+    .windows .window{
+        min-width: 150px;
+      }
+}
+@media(max-width:600px){
+    .windows .window{
+        min-width: 100px;
+      }
+}
+@media(max-width:500px){
+    footer{
+        padding: 5px;
+    }
+    footer .links{
+        padding: 5px;
+    }
+}
+
+/** min-width = ekran boyutu 1000px'in USTUNDEYKEN calisir*/
+@media(min-width:1000px){
+    main{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
